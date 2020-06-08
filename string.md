@@ -33,3 +33,10 @@ update the value back to int
 set inventory:4x100m-womens-final 0
 get inventory:4x100m-womens-final
 ```
+
+incerement the value by 1
+```redis
+INCR inventory:4x100m-womens-final
+get inventory:4x100m-womens-final
+```
+> this wil just do `++`
