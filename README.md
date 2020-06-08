@@ -63,7 +63,17 @@ set inventory:100-meters-womens-final "Sold out" NX
 set inventory:100-meters-womens-final 0 XX
 ```
 > NX: Not Existent, XX: Do Exist
+---
 
+set a key that will expire in 50000 seconds
+```redis
+set seat-hold Row:A:Seat:4 PX 50000
+```
+
+
+
+
+---
 
 set a key-value pair
 ```
