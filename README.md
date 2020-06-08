@@ -65,11 +65,23 @@ set inventory:100-meters-womens-final 0 XX
 > NX: Not Existent, XX: Do Exist
 ---
 
-set a key that will expire in 50000 seconds
+set a key that will expire in 50 seconds
 ```redis
 set seat-hold Row:A:Seat:4 PX 50000
+set seat-hold Row:A:Seat:4 EX 50
+get seat-hold
 ```
 
+update the expire time to 1 second
+```redis
+pexpire seat-hold 1
+```
+
+set expire time and check time remaining
+```redis
+set seat-hold Row:A:Seat:4 EX 50
+ttl seat-hold
+```
 
 
 
