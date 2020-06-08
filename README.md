@@ -18,7 +18,7 @@ NODE_NAME=$(kubectl get pod redis -o jsonpath='{.spec.nodeName}')
 NODE_IP=$(kubectl get nodes ${NODE_NAME} \
   -o jsonpath='{.status.addresses[?(@.type=="ExternalIP")].address}')
 
-redis-cli -h ${NODE_IP} -p 30637
+redis-cli -h ${NODE_IP} -p 30637 -n 0
 ```
 ---
 
@@ -81,6 +81,12 @@ set expire time and check time remaining
 ```redis
 set seat-hold Row:A:Seat:4 EX 50
 ttl seat-hold
+```
+
+retain the key
+```redis
+persist seat-hold
+get seat-hold
 ```
 
 
