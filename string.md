@@ -39,4 +39,4 @@ incerement the value by 1
 INCR inventory:4x100m-womens-final
 get inventory:4x100m-womens-final
 ```
-> this wil just do `++`
+> this will just do `++`
