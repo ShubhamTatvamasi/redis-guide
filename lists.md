@@ -29,3 +29,8 @@ remove one item from left
 ```redis
 lpop waitlist:basketball-mens-qual
 ```
+
+get item at index 1
+```redis
+lindex waitlist:basketball-mens-qual 1
+```
