@@ -20,6 +20,12 @@ NODE_IP=$(kubectl get nodes ${NODE_NAME} \
 
 redis-cli -h ${NODE_IP} -p 30637 -n 0
 ```
+
+delete deployment
+```bash
+kubectl delete pod/redis service/redis
+```
+
 ---
 
 ### redis cli commands
