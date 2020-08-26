@@ -34,12 +34,12 @@ kubectl delete pod/redis service/redis
 
 set a key-value pair
 ```
-SET apple 123
+SET fruit apple
 ```
 
 get key-value pair
 ```
-GET apple
+GET fruit
 ```
 
 delete everything
