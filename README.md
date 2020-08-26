@@ -19,6 +19,8 @@ NODE_IP=$(kubectl get nodes ${NODE_NAME} \
   -o jsonpath='{.status.addresses[?(@.type=="ExternalIP")].address}')
 
 redis-cli -h ${NODE_IP} -p 30637 -n 0
+
+redis-cli -h k8s.shubhamtatvamasi.com -p 30637
 ```
 
 delete deployment
