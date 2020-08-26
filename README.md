@@ -32,6 +32,11 @@ kubectl delete pod/redis service/redis
 
 ### redis cli commands
 
+list all keys
+```
+KEYS *
+```
+
 set a key-value pair
 ```
 SET fruit apple
